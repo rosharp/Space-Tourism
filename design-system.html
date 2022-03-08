@@ -125,12 +125,37 @@
           <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-accent">Explore</a>
         </div>
 
-        <div style="margin-bottom: 50vh">
+        <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem;">
           <!-- tabs -->
-
+          <div class="tab-list underline-indicators flex">
+            <button aria-selected="true"
+              class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2">Moon</button>
+            <button aria-selected="false"
+              class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2">Mars</button>
+            <button aria-selected="false"
+              class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2">Europa</button>
+          </div>
           <!-- dots -->
+          <div class="dot-indicators flex">
+            <button aria-selected="true" class="active"> <span class="sr-only">Slide title</span></button>
+            <button aria-selected="false" class=""><span class="sr-only">Slide title</span></button>
+            <button aria-selected="false" class=""><span class="sr-only">Slide title</span></button>
+          </div>
 
           <!-- numbers -->
+
+
+        </div>
+      </div>
+
+      <div class="flex">
+        <div style="margin-top: 5rem">
+          <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-accent">Explore</a>
+        </div>
+        <div class="number-indicators grid">
+          <button aria-selected="true" class="uppercase ff-serif fs-500">1</button>
+          <button aria-selected="false" class="uppercase ff-serif fs-500">2</button>
+          <button aria-selected="false" class="uppercase ff-serif fs-500">3</button>
         </div>
       </div>
 
