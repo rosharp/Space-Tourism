@@ -436,15 +436,22 @@ select {
     cursor: pointer;
     border: 0;
     font-size: 2rem;
+    border: 1px solid hsl( var(--clr-white) / .1);
     border-radius: 50%;
     padding: 1rem;
     aspect-ratio: 2.5;
-    background-color: hsl( var(--clr-white) / .25);
+    background-color: hsl( var(--clr-dark) );
+}
+
+.number-indicators > [aria-selected="false"] {
+    color: hsl( var(--clr-white) );
+
 }
  
 .number-indicators > *:hover,
 .number-indicators > *:focus { 
-    background-color: hsl( var(--clr-white) / .5);
+    transition: 400ms;
+    background-color: hsl( var(--clr-white) / .2);
 }
 
 .number-indicators > [aria-selected="true"] {
@@ -735,7 +742,7 @@ body {
         grid-template-areas: 
         '. title title .'
         '. content image .'
-         '. tabs image .';
+         '. . tabs image';
     }
 
     
@@ -753,24 +760,28 @@ grid-container--technology {
 }
 
 .grid-container--technology > picture {
- grid-area: image;
- max-width: 60%;
- border-bottom: 1px solid hsl( var(--clr-white) / .1);
+  grid-area: image;
+  border-bottom: 1px solid hsl( var(--clr-white) / .1);
+ }
+
+.numbered-title {
+      justify-self: start;
+      margin-top: 2rem;
 }
 
 .grid-container--technology > .number-indicators {
- grid-area: tabs;
+  grid-area: tabs;
 }
 
 .grid-container--technology > .technology-info {
- grid-area: content;
+  grid-area: content;
 }
 
 .technology-info h3 {
-color: hsl( var(--clr-white) / .5);
+  color: hsl( var(--clr-white) / .5);
 }
 
-@media (max-width: 40rem) {
+@media (min-width: 30rem) {
     .numbered-title {
       justify-self: center;
       margin-top: 2rem;
@@ -785,23 +796,73 @@ color: hsl( var(--clr-white) / .5);
             ' tabs tabs tabs tabs'
             '. content content .';
     }
+
+    .grid-container--technology > picture {
+/*       position: relative; */
+      /* left: 50%; */
+      /* right: 50%; */
+      /* margin-left: -50vw; */
+      width: 100%;
+      width: 100vw;
+      background-repeat:no-repeat;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size:cover;
   }
 
+  .grid-container--technology > article {
+    max-width: 75vw;
+  }
+}
+
   @media (min-width: 45rem) {
+
     .numbered-title {
-      justify-self: start;
+      margin-left: clamp(1rem, 8vw, 5rem); 
+      margin-right: 3rem;
+      place-self: start;
       margin-top: 2rem;
     }
 
     .grid-container--technology {
-        justify-items: center;
-        align-content: center;
-        grid-template-areas: 
-            '. title title .'
-            'tabs content image .';
+      justify-items: center;
+      align-content: center;
+      grid-template-areas: 
+          'title title . .'
+          'tabs content . image';
     }
+
+    /* 
+      TODO:
+- Get rid of overflow
+- Align numbered-title on the same level as number-indicators
+- Move image to the right corner
+- Fix image alignment on the smallset desktop screen resolution
+- Numbered-title alignment on tablet layout
+    */
 
     .number-indicators {
     display: grid;
+    min-width: 2rem;
+    margin-left: 3rem; 
+    margin-right: 3rem; 
   }
+
+    .grid-container--technology > picture {
+       grid-column: span 2;
+        align-self: end;
+        max-width: 90%;
+  } 
+
+    .grid-container--technology > article {
+        max-width: 80%;
+  } 
+
+    .grid-container--technology > article header {
+        margin-bottom: clamp(1rem, 3vw, 2rem);
+  } 
+
+
 }
+
