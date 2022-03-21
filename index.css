@@ -764,10 +764,6 @@ grid-container--technology {
   border-bottom: 1px solid hsl( var(--clr-white) / .1);
  }
 
-/* .numbered-title { */
-/*       justify-self: start; */
-/*       margin-top: 2rem; */
-/* } */
 
     .numbered-title {
       justify-self: center;
@@ -819,11 +815,16 @@ grid-container--technology {
 
   @media (min-width: 45rem) {
     .numbered-title {
-      margin-left: clamp(1rem, 8vw, 5rem); 
       margin-right: 3rem;
       place-self: start;
       margin-top: 2rem;
     }
+
+    .grid-container--technology .numbered-title {
+      margin-left: clamp(1rem, 8vw, 5rem); 
+  }
+
+
 
     .grid-container--technology {
       justify-items: center;
