@@ -451,7 +451,7 @@ select {
 .number-indicators > *:hover,
 .number-indicators > *:focus { 
     transition: 400ms;
-    background-color: hsl( var(--clr-white) / .2);
+    background-color: hsl( var(--clr-white) / .3);
 }
 
 .number-indicators > [aria-selected="true"] {
@@ -781,7 +781,7 @@ grid-container--technology {
   color: hsl( var(--clr-white) / .5);
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 35rem) {
     .numbered-title {
       justify-self: center;
       margin-top: 2rem;
