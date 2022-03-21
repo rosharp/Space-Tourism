@@ -764,10 +764,15 @@ grid-container--technology {
   border-bottom: 1px solid hsl( var(--clr-white) / .1);
  }
 
-.numbered-title {
-      justify-self: start;
+/* .numbered-title { */
+/*       justify-self: start; */
+/*       margin-top: 2rem; */
+/* } */
+
+    .numbered-title {
+      justify-self: center;
       margin-top: 2rem;
-}
+    }
 
 .grid-container--technology > .number-indicators {
   grid-area: tabs;
@@ -782,11 +787,6 @@ grid-container--technology {
 }
 
 @media (min-width: 30rem) {
-    .numbered-title {
-      justify-self: center;
-      margin-top: 2rem;
-    }
-
     .grid-container--technology {
         justify-items: center;
         align-content: center;
@@ -832,15 +832,6 @@ grid-container--technology {
           'title title . .'
           'tabs content . image';
     }
-
-    /* 
-      TODO:
-- Get rid of overflow
-- Align numbered-title on the same level as number-indicators
-- Move image to the right corner
-- Fix image alignment on the smallset desktop screen resolution
-- Numbered-title alignment on tablet layout
-    */
 
     .number-indicators {
     display: grid;
