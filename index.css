@@ -781,7 +781,7 @@ grid-container--technology {
   color: hsl( var(--clr-white) / .5);
 }
 
-@media (min-width: 35rem) {
+@media (max-width: 45rem) {
     .numbered-title {
       justify-self: center;
       margin-top: 2rem;
