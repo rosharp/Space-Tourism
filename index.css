@@ -750,15 +750,6 @@ body {
 
 /* crew page */
 
-grid-container--technology {
-    grid-template-areas: 
-     'title'
-     'image'
-     'tabs'
-     'content';
- padding-bottom: 0;
-}
-
 .grid-container--technology > picture {
   grid-area: image;
   border-bottom: 1px solid hsl( var(--clr-white) / .1);
@@ -782,7 +773,7 @@ grid-container--technology {
   color: hsl( var(--clr-white) / .5);
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 30em) {
     .grid-container--technology {
         justify-items: center;
         align-content: center;
@@ -795,10 +786,6 @@ grid-container--technology {
     }
 
     .grid-container--technology > picture {
-/*       position: relative; */
-      /* left: 50%; */
-      /* right: 50%; */
-      /* margin-left: -50vw; */
       width: 100%;
       width: 100vw;
       background-repeat:no-repeat;
@@ -813,18 +800,7 @@ grid-container--technology {
   }
 }
 
-  @media (min-width: 45rem) {
-    .numbered-title {
-      margin-right: 3rem;
-      place-self: start;
-      margin-top: 2rem;
-    }
-
-    .grid-container--technology .numbered-title {
-      margin-left: clamp(1rem, 8vw, 5rem); 
-  }
-
-
+  @media (min-width: 45em) {
 
     .grid-container--technology {
       justify-items: center;
@@ -834,11 +810,9 @@ grid-container--technology {
           'tabs content . image';
     }
 
-    .number-indicators {
-    display: grid;
-    min-width: 2rem;
-    margin-left: 3rem; 
-    margin-right: 3rem; 
+
+    .grid-container--technology .numbered-title {
+      margin-left: clamp(1rem, 8vw, 5rem); 
   }
 
     .grid-container--technology > picture {
@@ -856,5 +830,17 @@ grid-container--technology {
   } 
 
 
+    .numbered-title {
+      margin-right: 3rem;
+      place-self: start;
+      margin-top: 2rem;
+    }
+
+    .number-indicators {
+      display: grid;
+      min-width: 2rem;
+      margin-left: 3rem; 
+      margin-right: 3rem; 
+    }
 }
 
