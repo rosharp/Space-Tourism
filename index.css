@@ -749,7 +749,7 @@ body {
     
 } 
 
-/* crew page */
+/* technology alignment */
 
 .grid-container--technology {
       justify-items: center;
@@ -765,6 +765,7 @@ body {
 .grid-container--technology > picture {
       grid-area: image;
       border-bottom: 1px solid hsl( var(--clr-white) / .1);
+      max-width: 100vw;
 }
 
 .numbered-title {
