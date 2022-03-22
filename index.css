@@ -441,6 +441,7 @@ select {
     padding: 1rem;
     aspect-ratio: 2.5;
     background-color: hsl( var(--clr-dark) );
+    color: hsl( var(--clr-dark) );
 }
 
 .number-indicators > [aria-selected="false"] {
@@ -764,18 +765,11 @@ body {
 .grid-container--technology > picture {
       grid-area: image;
       border-bottom: 1px solid hsl( var(--clr-white) / .1);
-      width: 100%;
-      width: 100vw;
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
 }
 
 .numbered-title {
    justify-self: center;
-   margin-top: 2rem;
+   margin-bottom: 2rem;
 }
 
 .grid-container--technology > .number-indicators {
@@ -794,8 +788,23 @@ body {
   color: hsl( var(--clr-white) / .5);
 }
 
+/*   TODO:  */
+
+/* * numbered-title margin-bottom */
+/* * numbered-indicators digit color */
+/* * image size */
+/* * remove transform on mobile */
+
 .grid-container--technology > article {
   max-width: 75vw;
+}
+
+@media (min-width: 35em) {
+  .number-indicators > *:hover,
+  .number-indicators > *:focus { 
+    transition: none;
+    background-color: hsl( var(--clr-white) / .3);
+  }
 }
 
 
