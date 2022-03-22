@@ -469,7 +469,7 @@ body {
 }
 /* destination */
 .destination {
-    background-image: url(./assets/destination/background-home-mobile.jpg);
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
@@ -503,6 +503,24 @@ body {
         background-image: url(./assets/crew/background-crew-desktop.jpg);
     }
 } 
+
+/* technology */
+
+.technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+   }
+ }
+
+@media (min-width: 45rem) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+   }
+ }
 
 /* home */
 
@@ -770,7 +788,7 @@ body {
 
 .numbered-title {
    justify-self: center;
-   margin-bottom: 2rem;
+   margin-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .grid-container--technology > .number-indicators {
@@ -791,10 +809,10 @@ body {
 
 /*   TODO:  */
 
-/* * numbered-title margin-bottom */
-/* * numbered-indicators digit color */
 /* * image size */
-/* * remove transform on mobile */
+/* background image */
+
+
 
 .grid-container--technology > article {
   max-width: 80vw;
@@ -822,7 +840,7 @@ body {
 }
 
   .grid-container--technology > picture {
-     grid-column: span 2;
+      grid-column: span 2;
       align-self: end;
       max-width: 90%;
 } 
