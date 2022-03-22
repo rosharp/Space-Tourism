@@ -773,7 +773,7 @@ body {
   color: hsl( var(--clr-white) / .5);
 }
 
-@media (min-width: 30em) {
+@media (max-width: 44.999em) {
     .grid-container--technology {
         justify-items: center;
         align-content: center;
@@ -788,11 +788,11 @@ body {
     .grid-container--technology > picture {
       width: 100%;
       width: 100vw;
-      background-repeat:no-repeat;
-      -webkit-background-size:cover;
-      -moz-background-size:cover;
-      -o-background-size:cover;
-      background-size:cover;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
   }
 
   .grid-container--technology > article {
