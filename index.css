@@ -797,7 +797,7 @@ body {
 /* * remove transform on mobile */
 
 .grid-container--technology > article {
-  max-width: 75vw;
+  max-width: 80vw;
 }
 
 @media (min-width: 35em) {
